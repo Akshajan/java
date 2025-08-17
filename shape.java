@@ -2,6 +2,7 @@ class Shape1 {
     int length;
     int breadth;
     int height;
+
 }
 
 class Rectangle extends Shape1 {

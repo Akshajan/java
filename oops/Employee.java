@@ -3,7 +3,7 @@
 
 class Employee1 {
     private String name;
-    private int age;
+    private Integer age;
     // private int salary;
 
     public String getName() {
@@ -17,20 +17,19 @@ class Employee1 {
         name = n;
     }
 
-    public int getAge() {
-
-        return age;
+    public String getAge() {
+        return age == null ? "Not eligible" : String.valueOf(age);
     }
 
-    public void setAge(int a) {
-        if (a >= 18) {
+    public void setAge(Integer a) {
+        if (a != null && a >= 18) {
             age = a;
         } else {
-            age = 0;
+            age = null;
         }
     }
 
-    public Employee1(){
+    public Employee1() {
         System.out.println("Constructer is called");
     }
 
@@ -39,12 +38,12 @@ class Employee1 {
 public class Employee {
     public static void main(String args[]) {
         Employee1 e = new Employee1();
-    
+
         e.setName("Akshajanardhan");
         System.out.println("Employee name is " + e.getName());
         e.setAge(17);
         System.out.println("Employee Age is " + e.getAge());
-        Employee1 e1= new Employee1();
+        Employee1 e1 = new Employee1();
         // bank.Bank obj = new bank.Bank();
         // String s = obj.name[1];
         // System.out.print(s);
